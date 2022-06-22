@@ -47,3 +47,4 @@ class LinearTensor:
 trans = tr.Compose([ToTensor(), LinearTensor(2, 5)])
 dataset1 = MyDataset(train_images, train_labels, transform = trans)
 train_loader1 = DataLoader(dataset1, batch_size=10, shuffle=True)
+
