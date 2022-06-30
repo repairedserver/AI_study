@@ -121,3 +121,9 @@ def evaluation(dataloader):
         rmse = np.sqrt(mean_squared_error(predictions, actual))  # sklearn을 이용해 RMSE 계산
 
         return rmse
+
+train_rmse = evaluation(trainloader)
+test_rmse = evaluation(testloader)
+
+print("Train RMSE: ", train_rmse)
+print("Test RMSE: ", test_rmse)
