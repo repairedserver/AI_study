@@ -122,13 +122,10 @@ def evaluation(dataloader):
 
         return rmse
 
-<<<<<<< HEAD
 train_rmse = evaluation(trainloader) #학습 데이터의 MSE
 test_rmse = evaluation(testloader) #시험 데이터의 MSE
-=======
 train_rmse = evaluation(trainloader)
 test_rmse = evaluation(testloader)
->>>>>>> master
 
 print("Train RMSE: ", train_rmse)
 print("Test RMSE: ", test_rmse)
