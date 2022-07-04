@@ -1,11 +1,11 @@
-!unzip /content/drive/MyDrive/titanic/titanic.zip
+#!unzip /content/drive/MyDrive/titanic/titanic.zip
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-%matplotlib inline
-import seaborn as sns
+#%matplotlib inline
+#import seaborn as sns
 import warnings
 warnings.filterwarnings("ignore")
 plt.rcParams["font.family"] = 'Malgun Gothic'
