@@ -7,10 +7,10 @@ import torch.nn.functional as F
 import torch.optim as optim
 import matplotlib.pyplot as plt
 
-from google.colab import drive
-drive.mount('/content/gdrive')
+#from google.colab import drive
+#drive.mount('/content/gdrive')
 
-cd/content/gdrive/My Drive/deeplearningbro/deeplearningbro/pytorch
+#cd/content/gdrive/My Drive/deeplearningbro/deeplearningbro/pytorch
 
 #CIFAR10 이미지데이터
 # plane car bird cat dog deer frog horse ship truck
@@ -64,7 +64,7 @@ n = len(trainloader) #배치 갯수
 for epoch in range(10):
   running_loss = 0.0
   for i, data in enumerate(trainloader, 0):
-    inputs, labels = data[0].to(device), data[i].to(device) #배치 데이터
+    inputs, labels = data[0].to(device), data[1].to(device) #배치 데이터
 
     optimizer.zero_grad()
 
@@ -94,7 +94,7 @@ correct = 0
 total = 0
 with torch.nn_grad():
   for data in testloader:
-    images, labels = data[0].to(device), data[i].to(device)
+    images, labels = data[0].to(device), data[1].to(device)
     outputs = net(images)
     _, predicted = torch.max(outputs.data, 1)
     total += labels.size(0)
